@@ -16,16 +16,22 @@ function ChatBot() {
     const [messages, setMesssages] = useState(initialState)
     const [textMessage, setTextMessage] = useState('')
 
+    const inputRef = useRef()
     const scrollRef = useRef()
 
     useEffect(()=>{
+        inputRef.current.focus()
         scrollRef.current.scrollIntoView({behavior:"smooth"})
     })
-
    
-    const handleSend = () => {
+    const handleSend = (e) => {
+        e.preventDefault()
         setMesssages([...messages,{author:"user","message":textMessage}])
         setTextMessage('')
+        setTimeout(() => {
+            setMesssages([...messages,{author:"user","message":textMessage},{author:"bot","message":"We will get back to you shortly!!!"}])   
+        }, 1000);
+        
     }
 
   return (
@@ -45,8 +51,12 @@ function ChatBot() {
             </div>
             
             <div className="chat-input">
-                <input type="text" placeholder="Type your message..." value={textMessage} onChange={e=>setTextMessage(e.target.value)} />
-                <button onClick={handleSend}>Send</button>
+                
+                <form onSubmit={handleSend} style={{width:"100%"}}>
+                    <input ref={inputRef} type="text" placeholder="Type your message..." value={textMessage} onChange={e=>setTextMessage(e.target.value)} />
+                    <button type='submit' onClick={handleSend}>Send</button>
+                </form>
+                    
             </div>
         </div>
   </div>

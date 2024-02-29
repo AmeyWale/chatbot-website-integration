@@ -40,7 +40,9 @@
 
 /* Hero section */
 .hero {
-  background-image: url('https://via.placeholder.com/1500x500');
+  background-image: url('https://img.freepik.com/premium-photo/college-campus-where-activities-events-intersect-create-bustling-dynamic-environment-from-volunteer-initiatives-artistic-showcases-generated-by-ai_727385-4237.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   color: #fff;
   text-align: center;
@@ -197,13 +199,13 @@
 }
 
 /* Chat input */
-.chat-input {
+.chat-input, form {
   display: flex;
   align-items: center;
   padding: 8px;
 }
 
-.chat-input input {
+.chat-input form input {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
