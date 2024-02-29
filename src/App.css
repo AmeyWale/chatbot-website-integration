@@ -1,38 +1,223 @@
-.App {
+
+.header-container {
+  max-width: 1200px;
+  display: flex;
+  gap:2rem;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header .logo {
+  font-size: 24px;
+}
+
+.header .navigation ul {
+  list-style-type: none;
+}
+
+.header .navigation ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.header .navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('https://via.placeholder.com/1500x500');
+  background-size: cover;
+  color: #fff;
   text-align: center;
+  padding: 100px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cta-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* About section */
+.about {
+  padding: 100px 0;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Services section */
+.services {
+  background-color: #f4f4f4;
+  padding: 100px 0;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-card {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  margin-right: 20px;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+}
+
+/* Contact section */
+.contact {
+  padding: 100px 0;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Chatbot section */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+
+
+/* Chatbot section */
+.chatbot {
+  border-radius: 5px;
+  /* height: 350px; */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chat-container {
   display: flex;
   flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 8px 16px;
+  margin: 8px;
+  
+  border-radius: 16px;
+  max-width: 70%;
+}
+
+.message.received {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}
+
+.message.sent {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+/* Chat input */
+.chat-input {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
 }
