@@ -134,6 +134,7 @@
 .chatbot {
   position: fixed;
   bottom: 20px;
+  width: 500px;
   right: 20px;
   background-color: #fff;
   border: 1px solid #ddd;

@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
         <div className="header-container">
-          <h1 className="logo">Company Name</h1>
+          <h1 className="logo">DYPCET</h1>
           <nav className="navigation">
             <ul>
               <li><a href="#about">About</a></li>

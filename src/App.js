@@ -19,8 +19,8 @@ function App() {
       <Header/>
       <section id="hero" className="hero">
         <div className="container">
-          <h2>Welcome to Our Company</h2>
-          <p>Your go-to solution for all your needs</p>
+          <h2>Welcome to DYPCET</h2>
+          <p>KASABA BAWDA, KOLHAPUR</p>
 
           <button onClick={toggleChatbot} className="cta-button">
             {showChatbot ? 'Hide Chatbot' : 'Show Chatbot'}

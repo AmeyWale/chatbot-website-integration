@@ -24,13 +24,25 @@ function ChatBot() {
         scrollRef.current.scrollIntoView({behavior:"smooth"})
     })
    
-    const handleSend = (e) => {
+    const handleSend = async (e) => {
         e.preventDefault()
+
+        if (textMessage.length === 0){
+            return 
+        }
+
         setMesssages([...messages,{author:"user","message":textMessage}])
         setTextMessage('')
-        setTimeout(() => {
-            setMesssages([...messages,{author:"user","message":textMessage},{author:"bot","message":"We will get back to you shortly!!!"}])   
-        }, 1000);
+        // setTimeout(() => {
+        //     setMesssages([...messages,{author:"user","message":textMessage},{author:"bot","message":"We will get back to you shortly!!!"}])   
+        // }, 1000);
+        let response = await fetch("http://localhost:8000/ask",{
+            method:"POST",
+            body:JSON.stringify({message:textMessage})
+        })
+        let data = await response.json()
+        setMesssages([...messages,{author:"user","message":textMessage},{author:"bot","message":data.response}])   
+
         
     }
 
