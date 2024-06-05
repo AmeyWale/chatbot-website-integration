@@ -16,23 +16,27 @@ function App() {
 
   return (
     <div className="landing-page">
-      <Header/>
+      <Header />
       <section id="hero" className="hero">
         <div className="container">
-          <h2>Welcome to Our Company</h2>
-          <p>Your go-to solution for all your needs</p>
+          <h2>Welcome to Our College</h2>
+          <p>Empowering Minds, Enriching Lives</p>
+          <p>Explore a world of knowledge, innovation, and opportunities.</p>
 
-          <button onClick={toggleChatbot} className="cta-button">
-            {showChatbot ? 'Hide Chatbot' : 'Show Chatbot'}
-          </button>
+          <div className="cta-buttons">
+            <button onClick={toggleChatbot} className="cta-button">
+              {showChatbot ? 'Hide Chatbot' : 'Chat Now'}
+            </button>
 
+          </div>
         </div>
       </section>
-      
-      <Services/>
-      
-      {showChatbot && <ChatBot/>}
-      <Footer/>
+
+
+      <Services />
+
+      {showChatbot && <ChatBot />}
+      <Footer />
     </div>
   );
 }
