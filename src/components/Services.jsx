@@ -3,6 +3,7 @@ import React from 'react';
 function Services() {
   return (
     <section id="services" className="services">
+
       <div className="container">
         <h2>Why Our College...?</h2>
         <div className="service-cards">
@@ -25,6 +26,23 @@ function Services() {
           <div className="service-card">
             <h3>Admission Process</h3>
             <p>Streamlined admission process ensuring transparency, fairness, and equal opportunities for all aspiring students.</p>
+
+        <div className="container">
+          <h2>Our Facilities</h2>
+          <div className="service-cards">
+            <div className="service-card">
+              <h3>Service 1</h3>
+              <p>Description of service 1</p>
+            </div>
+            <div className="service-card">
+              <h3>Service 2</h3>
+              <p>Description of service 2</p>
+            </div>
+            <div className="service-card">
+              <h3>Service 3</h3>
+              <p>Description of service 3</p>
+            </div>
+
           </div>
         </div>
       </div>

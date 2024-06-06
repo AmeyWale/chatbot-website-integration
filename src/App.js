@@ -19,9 +19,13 @@ function App() {
       <Header />
       <section id="hero" className="hero">
         <div className="container">
+
           <h2>Welcome to Our College</h2>
           <p>Empowering Minds, Enriching Lives</p>
           <p>Explore a world of knowledge, innovation, and opportunities.</p>
+
+          <h2>Welcome to DYPCET</h2>
+          <p>KASABA BAWDA, KOLHAPUR</p>
 
           <div className="cta-buttons">
             <button onClick={toggleChatbot} className="cta-button">

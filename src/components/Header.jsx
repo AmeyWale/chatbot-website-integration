@@ -4,8 +4,12 @@ function Header() {
   return (
     <header className="header">
         <div className="header-container">
+
           {/* <h1 className="logo">Company Name</h1> */}
           <img src="/clgLogo.png" alt="Company Logo" className="logo" />
+
+          <h1 className="logo">DYPCET</h1>
+
           <nav className="navigation">
             <ul>
               <li><a href="#home">Home</a></li>
